@@ -26,21 +26,60 @@ header {
   padding: 10px;
   overflow-y: auto;
   border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
 }
 
-#sidebar ul {
+#sidebar h2 {
+  margin-top: 0;
+}
+
+#locationList {
   list-style: none;
   padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
 }
 
-#sidebar li {
-  margin: 8px 0;
+#locationList li {
+  margin: 5px 0;
   cursor: pointer;
   color: #2d572c;
 }
 
-#sidebar li:hover {
+#locationList li:hover {
   text-decoration: underline;
+}
+
+#legend {
+  margin-bottom: 10px;
+}
+
+#legend ul {
+  list-style: none;
+  padding: 0;
+}
+
+#legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.color {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.color.cesta {
+  background-color: gray;
+}
+
+.color.zelen {
+  background-color: green;
 }
 
 #map {

@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
+  const typeColors = {
+    "cesta": "gray",
+    "cesta se zelení": "green"
+  };
+
   const locations = [
     {
       name: "Chrášťany",
@@ -36,7 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const listEl = document.getElementById("locationList");
 
   locations.forEach(loc => {
-    L.polyline(loc.path, { color: 'gray' }).addTo(map);
+    const color = typeColors[loc.type] || "gray";
+    L.polyline(loc.path, { color }).addTo(map);
+
     const midIndex = Math.floor(loc.path.length / 2);
     const marker = L.marker(loc.path[midIndex], {
       icon: L.icon({

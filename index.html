@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Státní pozemkový úřad, pobočka Kolín</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -15,6 +15,13 @@
   <div class="container">
     <aside id="sidebar">
       <h2>Seznam lokalit</h2>
+      <div id="legend">
+        <h3>Legenda</h3>
+        <ul>
+          <li><span class="color cesta"></span> Cesta</li>
+          <li><span class="color zelen"></span> Cesta se zelení</li>
+        </ul>
+      </div>
       <ul id="locationList"></ul>
     </aside>
     <div id="map"></div>
